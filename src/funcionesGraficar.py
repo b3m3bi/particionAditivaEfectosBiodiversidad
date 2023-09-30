@@ -318,8 +318,8 @@ def plot_CE_SE_effect_yield(M,
 
     fig, axs = plt.subplot_mosaic(layout,
                                   layout="constrained",
-                                  figsize=(9, rows*1.8),
-                                  width_ratios=[0.2,0.2,0.2,0.2,0.2])
+                                  figsize=(9, rows*2.1),
+                                  width_ratios=[0.14,0.26,0.26,0.17,0.17])
 
     for i in range(len(Yos)):
         Yo = Yos[i]

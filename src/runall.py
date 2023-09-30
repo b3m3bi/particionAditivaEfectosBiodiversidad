@@ -14,12 +14,13 @@ plt.rc('figure', titlesize=15)
 
 plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['Arial']
-cmap = 'RdBu'
-
+cmap = 'PuOr'
 #%%
 # Se hacen muchos paneles usando un gradiente de parámetos
 RYes = np.array([[0.4,0.6],[0.5,0.5],[0.6,0.4]])
+# RYes = np.array([[0.5,0.5]])
 Ms = np.array([[10,6],[15,6],[20,6]])
+# Ms = np.array([[15,6]])
 Yos = np.array([[14,2.2],[9,4.2],[5,5.8]])
 
 max_effect = max([max(BE(M,Yo,RYe)) for Yo in Yos for RYe in RYes for M in Ms])
@@ -34,8 +35,8 @@ for i in range(len(RYes)):
               # plt.show()
               plt.savefig('../results/exploracion-BE-merge-%d-%d.png' %(i,j), dpi=100)
 
-
-# # Panel que comparar todos los effectos Loreau y Héctor + Fox
+#%%
+# # Panel que compara todos los effectos Loreau y Héctor + Fox
 # M = np.array([500,250])
 # RYe = np.array([0.6,0.4])
 # max_x, max_y = 600,350
